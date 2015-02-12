@@ -14,7 +14,6 @@
 		E29E3F9C1A6C3EA600FF4001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29E3F9A1A6C3EA600FF4001 /* Main.storyboard */; };
 		E29E3F9E1A6C3EA600FF4001 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E3F9D1A6C3EA600FF4001 /* Images.xcassets */; };
 		E29E3FA11A6C3EA600FF4001 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29E3F9F1A6C3EA600FF4001 /* LaunchScreen.xib */; };
-		E29E3FAD1A6C3EA600FF4001 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E3FAC1A6C3EA600FF4001 /* CalculatorTests.m */; };
 		E29E9F7F1A6F2D3800618AA4 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E9F7E1A6F2D3800618AA4 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E29E3F8A1A6C3EA600FF4001 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29E3F8A1A6C3EA600FF4001 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/mwichmann/Developer/csci448/project1/part1/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
 		E29E3F8E1A6C3EA600FF4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29E3F8F1A6C3EA600FF4001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E29E3F911A6C3EA600FF4001 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,9 +39,7 @@
 		E29E3F9B1A6C3EA600FF4001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E29E3F9D1A6C3EA600FF4001 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E29E3FA01A6C3EA600FF4001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E29E3FA61A6C3EA600FF4001 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E29E3FAB1A6C3EA600FF4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E29E3FAC1A6C3EA600FF4001 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		E29E3FA61A6C3EA600FF4001 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CalculatorTests.xctest; path = "/Users/mwichmann/Developer/csci448/project1/part1/build/Debug-iphoneos/CalculatorTests.xctest"; sourceTree = "<absolute>"; };
 		E29E9F7D1A6F2D3800618AA4 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
 		E29E9F7E1A6F2D3800618AA4 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,18 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E29E3F8C1A6C3EA600FF4001 /* Calculator */,
-				E29E3FA91A6C3EA600FF4001 /* CalculatorTests */,
-				E29E3F8B1A6C3EA600FF4001 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		E29E3F8B1A6C3EA600FF4001 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E29E3F8A1A6C3EA600FF4001 /* Calculator.app */,
-				E29E3FA61A6C3EA600FF4001 /* CalculatorTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E29E3F8C1A6C3EA600FF4001 /* Calculator */ = {
@@ -106,23 +92,6 @@
 			children = (
 				E29E3F8E1A6C3EA600FF4001 /* Info.plist */,
 				E29E3F8F1A6C3EA600FF4001 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E29E3FA91A6C3EA600FF4001 /* CalculatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				E29E3FAC1A6C3EA600FF4001 /* CalculatorTests.m */,
-				E29E3FAA1A6C3EA600FF4001 /* Supporting Files */,
-			);
-			path = CalculatorTests;
-			sourceTree = "<group>";
-		};
-		E29E3FAA1A6C3EA600FF4001 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E29E3FAB1A6C3EA600FF4001 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,7 +161,7 @@
 				Base,
 			);
 			mainGroup = E29E3F811A6C3EA600FF4001;
-			productRefGroup = E29E3F8B1A6C3EA600FF4001 /* Products */;
+			productRefGroup = E29E3F811A6C3EA600FF4001;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -239,7 +208,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E29E3FAD1A6C3EA600FF4001 /* CalculatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +349,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CalculatorTests/Info.plist;
+				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
@@ -396,7 +364,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CalculatorTests/Info.plist;
+				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
