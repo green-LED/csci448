@@ -10,7 +10,7 @@
 #import "GraphViewController.h"
 #import "CalculatorBrain.h"
 #import "GraphView.h"
-#import "CalculatorViewController.h"
+#import "ViewController.h"
 
 @interface GraphViewController () <GraphViewDataSource, ControllerDelegate>
 
@@ -23,6 +23,7 @@
 @synthesize program = _program;
 @synthesize graphView = _graphView;
 
+@synthesize delegateController;
 
 - (void)awakeFromNib {
 	[super awakeFromNib];

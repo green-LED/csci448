@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7729D0E1-8B6A-4D9D-B00C-2387738ABC58</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BD3739A4527545B0EA37D4D6AAD48E81E62ABF5</key>
+		<string>https://github.com/green-LED/csci448</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>project1/part2/Calculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BD3739A4527545B0EA37D4D6AAD48E81E62ABF5</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/green-LED/csci448</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BD3739A4527545B0EA37D4D6AAD48E81E62ABF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BD3739A4527545B0EA37D4D6AAD48E81E62ABF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>csci448</string>
+		</dict>
+	</array>
+</dict>
+</plist>
