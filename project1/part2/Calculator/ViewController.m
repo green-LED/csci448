@@ -55,18 +55,9 @@
                         usingVariableValues:self.variableValue];
     
     self.display.text = result;
-    [self addHistory:self.display.text];
+    self.history.text = [CalculatorBrain descriptionOfProgram:self.brain.program];
     
     self.userIsEntering = NO;
-}
-
-// For every number entered and operation hit, append it to the history
-- (IBAction)addHistory:(NSString *)entry {
-    self.history.text = [self.history.text stringByAppendingString:entry];
-    self.history.text = [self.history.text stringByAppendingString:@" "];
-    if (self.history.text.length > 40) {
-        self.history.text = [self.history.text substringToIndex:40];
-    }
 }
 
 - (IBAction)digitPressed:(UIButton *)sender {
@@ -99,12 +90,12 @@
     if (userIsEntering) {
         [self enterPressed];
     }
-    [self.brain pushOperation:sender.currentTitle];
+    [self.brain pushOperation:[sender currentTitle]];
     [self updateView];
 }
 
 - (IBAction)variablePressed:(UIButton *)sender {
-    [self.brain pushVariable:sender.currentTitle];
+    [self.brain pushVariable:[sender currentTitle]];
     [self updateView];
 }
 
