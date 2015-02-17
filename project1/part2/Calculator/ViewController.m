@@ -56,8 +56,8 @@
     
     self.display.text = result;
     self.history.text = [CalculatorBrain descriptionOfProgram:self.brain.program];
-    
     self.userIsEntering = NO;
+    NSLog(@"updated");
 }
 
 - (IBAction)digitPressed:(UIButton *)sender {

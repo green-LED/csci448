@@ -39,13 +39,11 @@
         if ([obj isKindOfClass:[NSString class]]) {
             add = obj;
         } else if ([obj isKindOfClass:[NSNumber class]]){
-            NSLog(@"%@, a %@", obj, [obj class]);
             add = [(NSNumber *) obj stringValue];
         }
         desc = [desc stringByAppendingString:add];
         desc = [desc stringByAppendingString:@" "];
     }
-    
     return desc;
 }
 
@@ -54,7 +52,6 @@
     double result = 0;
     
     id topOfStack = [stack lastObject];
-    NSLog(@"%@", topOfStack);
     if (topOfStack) [stack removeLastObject]; else return @"0";
     
     
