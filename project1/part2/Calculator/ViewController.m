@@ -8,13 +8,13 @@
 
 #import "ViewController.h"
 #import "CalculatorBrain.h"
-#import "GraphViewController.h"
 
 @interface ViewController ()
 @property (nonatomic) BOOL userIsEntering;
 @property (nonatomic, strong) CalculatorBrain *brain;
 @property (nonatomic, strong) NSDictionary *variableValue;
 @property (nonatomic, weak) id <ControllerDelegate> popoverDelegate;
+
 @end
 
 @implementation ViewController
@@ -25,16 +25,6 @@
 @synthesize brain = _brain;
 @synthesize variableValue = _variableValue;
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return self.splitViewController ?
-    YES : UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
-}
-
-- (GraphViewController *)graphViewController {
-    return self.popoverDelegate ?
-    self.popoverDelegate :[self.splitViewController.viewControllers lastObject];
-}
-
 - (CalculatorBrain *)brain {
     //if (self.popoverDelegate) _brain = [[self.popoverDelegate delegateController] brain];
     if (!_brain) _brain = [[CalculatorBrain alloc] init];
@@ -42,22 +32,17 @@
 }
 
 - (NSDictionary *)variableValue {
-    
     if (!_variableValue) _variableValue = [[NSDictionary alloc] init];
     return _variableValue;
 }
 
-
 -(void)updateView {
-    
     // Find the result by running the program passing in the test variable values
-    id result = [CalculatorBrain runProgram:self.brain.program
-                        usingVariableValues:self.variableValue];
+    id result = [CalculatorBrain runProgram:self.brain.program];
     
-    self.display.text = result;
+    self.display.text = [result stringValue];
     self.history.text = [CalculatorBrain descriptionOfProgram:self.brain.program];
     self.userIsEntering = NO;
-    NSLog(@"updated");
 }
 
 - (IBAction)digitPressed:(UIButton *)sender {
@@ -86,15 +71,16 @@
     [self updateView];
 }
 
-- (IBAction)operationPressed:(UIButton *)sender {
+- (IBAction)operationPressed:(id)sender {
     if (userIsEntering) {
         [self enterPressed];
     }
-    [self.brain pushOperation:[sender currentTitle]];
+    NSString *operation = [sender currentTitle];
+    [self.brain pushOperation:operation];
     [self updateView];
 }
 
-- (IBAction)variablePressed:(UIButton *)sender {
+- (IBAction)variablePressed:(id)sender {
     [self.brain pushVariable:[sender currentTitle]];
     [self updateView];
 }
@@ -103,10 +89,10 @@
     [self.brain clearPrograms];
     self.userIsEntering = NO;
     self.display.text = @"0";
-    self.history.text = @"";
+    [self updateView];
 }
 
-// undo last digit (or dot) pressed
+// undo last digit (or dot) pressed.
 // If last digit is erased, stop entering
 - (IBAction)backspace {
     if (self.userIsEntering) {
@@ -117,29 +103,6 @@
         }
     }
 }
-
-- (IBAction)drawGraphPressed {
-    /*
-    if ([self graphViewController]) {
-        [[self graphViewController] setProgram:self.brain.program];
-        [[self graphViewController] refreshView ];
-    } else {
-        [self performSegueWithIdentifier:@"DisplayGraphView" sender:self];
-    }*/
-}
-/*
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [segue.destinationViewController setProgram:self.brain.program];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    [self updateView];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-}*/
 
 
 @end

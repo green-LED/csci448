@@ -2,9 +2,8 @@
 //  CalculatorBrain.h
 //  Calculator
 //
-//  Created by CS193p Instructor.
-//  Copyright (c) 2011 Stanford University.
-//  All rights reserved.
+//  Created by Matthew Wichmann on 1/20/15.
+//  Copyright (c) 2015 mwichmann. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,8 +21,7 @@
 + (NSString *)descriptionOfProgram:(id)program;
 
 + (id)runProgram:(id)program;
-+ (id)runProgram:(id)program 
- usingVariableValues:(NSDictionary *)variableValue;
-
++ (id)runProgram:(id)program
+usingVariableValues:(NSDictionary *)variableValue;
 
 @end
