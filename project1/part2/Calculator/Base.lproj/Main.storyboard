@@ -443,7 +443,7 @@
         <!--Graph-->
         <scene sceneID="K2g-rH-080">
             <objects>
-                <viewController id="7zo-wj-yYf" sceneMemberID="viewController">
+                <viewController id="7zo-wj-yYf" customClass="GraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6V7-q4-faF"/>
                         <viewControllerLayoutGuide type="bottom" id="SsC-vh-o2T"/>
@@ -453,7 +453,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtI-Zb-z04">
-                                <rect key="frame" x="61" y="512" width="42" height="21"/>
+                                <rect key="frame" x="23" y="527" width="281" height="21"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E29A122B1A96EFAB00D979DA /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A12281A96EFAB00D979DA /* GraphView.m */; };
+		E29A122C1A96EFAB00D979DA /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A122A1A96EFAB00D979DA /* GraphViewController.m */; };
+		E29A122F1A96F05800D979DA /* AxesDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A122E1A96F05800D979DA /* AxesDrawer.m */; };
 		E29E3F901A6C3EA600FF4001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E3F8F1A6C3EA600FF4001 /* main.m */; };
 		E29E3F931A6C3EA600FF4001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E3F921A6C3EA600FF4001 /* AppDelegate.m */; };
 		E29E3F961A6C3EA600FF4001 /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E29E3F941A6C3EA600FF4001 /* Calculator.xcdatamodeld */; };
@@ -28,7 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E29E3F8A1A6C3EA600FF4001 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/mwichmann/Developer/csci448/project1/part1/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
+		E29A12251A96E81900D979DA /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29A12261A96E81900D979DA /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29A12271A96EFAB00D979DA /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		E29A12281A96EFAB00D979DA /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		E29A12291A96EFAB00D979DA /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		E29A122A1A96EFAB00D979DA /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		E29A122D1A96F05800D979DA /* AxesDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxesDrawer.h; sourceTree = "<group>"; };
+		E29A122E1A96F05800D979DA /* AxesDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxesDrawer.m; sourceTree = "<group>"; };
 		E29E3F8E1A6C3EA600FF4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29E3F8F1A6C3EA600FF4001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E29E3F911A6C3EA600FF4001 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,7 +49,6 @@
 		E29E3F9B1A6C3EA600FF4001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E29E3F9D1A6C3EA600FF4001 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E29E3FA01A6C3EA600FF4001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E29E3FA61A6C3EA600FF4001 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CalculatorTests.xctest; path = "/Users/mwichmann/Developer/csci448/project1/part1/build/Debug-iphoneos/CalculatorTests.xctest"; sourceTree = "<absolute>"; };
 		E29E9F7D1A6F2D3800618AA4 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
 		E29E9F7E1A6F2D3800618AA4 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				E29E3F8C1A6C3EA600FF4001 /* Calculator */,
+				E29A12251A96E81900D979DA /* Calculator.app */,
+				E29A12261A96E81900D979DA /* CalculatorTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +90,12 @@
 				E29E3F971A6C3EA600FF4001 /* ViewController.h */,
 				E29E3F981A6C3EA600FF4001 /* ViewController.m */,
 				E29E3F9A1A6C3EA600FF4001 /* Main.storyboard */,
+				E29A12271A96EFAB00D979DA /* GraphView.h */,
+				E29A12281A96EFAB00D979DA /* GraphView.m */,
+				E29A122D1A96F05800D979DA /* AxesDrawer.h */,
+				E29A122E1A96F05800D979DA /* AxesDrawer.m */,
+				E29A12291A96EFAB00D979DA /* GraphViewController.h */,
+				E29A122A1A96EFAB00D979DA /* GraphViewController.m */,
 				E29E3F9D1A6C3EA600FF4001 /* Images.xcassets */,
 				E29E3F9F1A6C3EA600FF4001 /* LaunchScreen.xib */,
 				E29E3F941A6C3EA600FF4001 /* Calculator.xcdatamodeld */,
@@ -113,7 +130,7 @@
 			);
 			name = Calculator;
 			productName = Calculator;
-			productReference = E29E3F8A1A6C3EA600FF4001 /* Calculator.app */;
+			productReference = E29A12251A96E81900D979DA /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E29E3FA51A6C3EA600FF4001 /* CalculatorTests */ = {
@@ -131,7 +148,7 @@
 			);
 			name = CalculatorTests;
 			productName = CalculatorTests;
-			productReference = E29E3FA61A6C3EA600FF4001 /* CalculatorTests.xctest */;
+			productReference = E29A12261A96E81900D979DA /* CalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,6 +216,9 @@
 				E29E3F931A6C3EA600FF4001 /* AppDelegate.m in Sources */,
 				E29E3F901A6C3EA600FF4001 /* main.m in Sources */,
 				E29E3F991A6C3EA600FF4001 /* ViewController.m in Sources */,
+				E29A122C1A96EFAB00D979DA /* GraphViewController.m in Sources */,
+				E29A122B1A96EFAB00D979DA /* GraphView.m in Sources */,
+				E29A122F1A96F05800D979DA /* AxesDrawer.m in Sources */,
 				E29E3F961A6C3EA600FF4001 /* Calculator.xcdatamodeld in Sources */,
 				E29E9F7F1A6F2D3800618AA4 /* CalculatorBrain.m in Sources */,
 			);
