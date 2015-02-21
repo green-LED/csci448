@@ -93,13 +93,16 @@
 	
 	CGPoint viewCoordinate;
 	
-	//TODO: convert to view coordinate. Hint: follow the strategy used in the method above
+    viewCoordinate.x = self.axisOrigin.x + self.scale*coordinate.x;
+    viewCoordinate.y = self.axisOrigin.y - self.scale*coordinate.y;
 	
 	return viewCoordinate;
 }
 
 
 - (void)drawRect:(CGRect)rect {
+    
+    self.contentMode = UIViewContentModeScaleAspectFit;
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
@@ -122,13 +125,28 @@
 	
 	BOOL firstPoint = YES;
 	
-	// TODO: Iterate over the horizontal pixels, plotting the corresponding y values
+    CGContextBeginPath(context);
     for (CGFloat i = startingX; i <= endingX; i += increment) {
+        
+        CGPoint viewCoordinate;
+        viewCoordinate.x = i;
+        viewCoordinate.y = 0;
+        
+        CGPoint graphCoordinate = [self convertToGraphCoordinateFromViewCoordinate:viewCoordinate];
+        graphCoordinate.y = [_datasource YValueForXValue:graphCoordinate.x inGraphView:self];
+        if (graphCoordinate.y == INFINITY) continue;
+        if (graphCoordinate.y != graphCoordinate.y) continue;
+        
+        viewCoordinate = [self convertToViewCoordinateFromGraphCoordinate:graphCoordinate];
+        
         if (firstPoint) {
-            
-        }
+            CGContextMoveToPoint(context, viewCoordinate.x, viewCoordinate.y);
+            firstPoint = NO;
+        } else CGContextAddLineToPoint(context, viewCoordinate.x, viewCoordinate.y);
+        
     }
 	
+    [[UIColor blackColor] setStroke];
 	CGContextStrokePath(context);
 }
 
@@ -136,18 +154,18 @@
 	if ((gesture.state == UIGestureRecognizerStateChanged) || 
 		 (gesture.state == UIGestureRecognizerStateEnded)) {
 
-		// TODO: Adjust the scale and reset the gesture scale to 1
-		
-	}
+        [self setScale:self.scale*gesture.scale];
+        [gesture setScale:1];
+    }
 }
 
 - (void)pan:(UIPanGestureRecognizer *)gesture {
 	if ((gesture.state == UIGestureRecognizerStateChanged) || 
 		 (gesture.state == UIGestureRecognizerStateEnded)) {
 		
-
-		// Todo: Move the origin of the graph
-					
+        CGPoint translation = [gesture translationInView:self];
+        [self setAxisOrigin:CGPointMake(self.axisOrigin.x + translation.x, self.axisOrigin.y + translation.y)];
+        [gesture setTranslation:CGPointZero inView:self];
 	}
 }
 

@@ -452,20 +452,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtI-Zb-z04">
-                                <rect key="frame" x="23" y="527" width="281" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvg-2D-rh6" customClass="GraphView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kvg-2D-rh6" secondAttribute="trailing" id="84Q-cX-HJd"/>
+                            <constraint firstItem="Kvg-2D-rh6" firstAttribute="top" secondItem="6V7-q4-faF" secondAttribute="bottom" id="Z21-Bu-b6m"/>
+                            <constraint firstItem="Kvg-2D-rh6" firstAttribute="bottom" secondItem="SsC-vh-o2T" secondAttribute="top" id="f3M-eC-BJt"/>
+                            <constraint firstItem="Kvg-2D-rh6" firstAttribute="leading" secondItem="DGd-9f-TOe" secondAttribute="leading" id="mGN-58-vwg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="1LN-Ww-uSp"/>
+                    <connections>
+                        <outlet property="graphView" destination="Kvg-2D-rh6" id="nZm-b5-29x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9q-9f-muK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="216"/>
+            <point key="canvasLocation" x="1045" y="222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6i-bz-LGO">

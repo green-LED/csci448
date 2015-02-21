@@ -24,7 +24,6 @@
 @synthesize graphView = _graphView;
 @synthesize delegateController;
 
-@synthesize  description;
 /*
 - (void)awakeFromNib {
 	[super awakeFromNib];
@@ -125,7 +124,7 @@
 	_program = program;
 	
 	// We want to set the title of the controller if the program changes
-	self.title = [NSString stringWithFormat:@"y = %@", 
+	self.title = [NSString stringWithFormat:@"y = %@",
 					  [CalculatorBrain descriptionOfProgram:self.program]];
 } 
 
@@ -133,7 +132,7 @@
 - (void) setGraphView:(GraphView *)graphView {
 	_graphView = graphView;
 	self.graphView.dataSource = self;
-	/*
+	
 	// enable pinch gesture in the GraphView using pinch: handler
 	[self.graphView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] 
 													  initWithTarget:self.graphView 
@@ -150,7 +149,7 @@
 														 action:@selector(tripleTap:)];	
 	tapGestureRecognizer.numberOfTapsRequired = 3;
 	[self.graphView addGestureRecognizer:tapGestureRecognizer];	
-	*/
+	
 	// We want to update the graphView to set the starting values for the program. In iPad mode 
 	// this method is called before a program is set, in which case we don't want to do anything
 	[self refreshView];

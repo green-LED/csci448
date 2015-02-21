@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CalculatorBrain.h"
+#import "GraphViewController.h"
 
 @interface ViewController ()
 @property (nonatomic) BOOL userIsEntering;
@@ -25,8 +26,14 @@
 @synthesize brain = _brain;
 @synthesize variableValue = _variableValue;
 
+- (GraphViewController *)graphViewController {
+    // TODO: declare the delegate protocol in viewcontroller.h to be able to use this functionality
+    return self.popoverDelegate ?
+    self.popoverDelegate :[self.splitViewController.viewControllers lastObject];
+}
+
 - (CalculatorBrain *)brain {
-    //if (self.popoverDelegate) _brain = [[self.popoverDelegate delegateController] brain];
+    if (self.popoverDelegate) _brain = [[self.popoverDelegate delegateController] brain];
     if (!_brain) _brain = [[CalculatorBrain alloc] init];
     return _brain;
 }
@@ -102,6 +109,29 @@
             self.display.text = @"0";
         }
     }
+}
+
+- (IBAction)drawGraphPressed {
+    
+    if ([self graphViewController]) {
+        [[self graphViewController] setProgram:self.brain.program];
+        [[self graphViewController] refreshView ];
+    } else {
+        [self performSegueWithIdentifier:@"DisplayGraphView" sender:self];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [segue.destinationViewController setProgram:self.brain.program];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self updateView];
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
 }
 
 

@@ -11,7 +11,6 @@
 @interface GraphViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) id program;
-@property (weak, nonatomic) IBOutlet UILabel *description;
 
 - (void)refreshView;
 
