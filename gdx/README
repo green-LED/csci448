@@ -1,0 +1,15 @@
+Built in Android Studio
+
+You should be able to run the game from it using an emulator or a connected Android device
+
+The game consists of a ship that constantly shoots up. You can
+ move the ship on the x-axis by pressing down/dragging anywhere.
+ Pressing above or below the ship changes the nature of the
+ bullets it shoots. Enemies spawn at random time intervals from
+ random points on the top of the screen and travel down at random
+ speeds. The speed and frequency of enemies increases over time.
+ The bullets fired by the player ship remove enemies on contact.
+
+The proposal promised a menu that could be pulled up and flicked
+ to select a weapon, but I had trouble making such an interface,
+ so opted for a simpler control scheme.
